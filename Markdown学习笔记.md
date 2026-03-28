@@ -1,6 +1,7 @@
 # Markdown学习笔记  
 1.在写标题的时候一共分为六级标题，一级标题前面有一个井号且再空一格，二级标题前有两个井号也要空格，以此类推。  
 2.在Markdown中若想要换行，在编辑区内换行后，在显示区只能看到空了一个空格的效果，因此要达到换行效果需要点两次空格键后，再按空格键。效果如：  
+2.在Markdown中若想要换行，在编辑区内换行后，在显示区只能看到空了一个空格的效果，因此要达到换行效果需要点两次空格键后，再按回车键。效果如：  
 Markdown学习方式：  
 方法一：   
 3.第二种换行方式，是在进行了第一步的换行后再点击一次enter换行键，就可以与上一行间隔一行。效果如：  
@@ -63,12 +64,16 @@ int main() {
 [a]:https://www.baidu.com    
 [b]:https://itbaima.cn  
 19.图片的插入（只能以链接的方式插入：本地或者网络）  
+<<<<<<< HEAD
 第一种方式：![](链接)  
 ![图片](https://ts1.tc.mm.bing.net/th/id/R-C.46bca01b5ef850d6ba573e7ca56e3bb7?rik=AnfTyID1E0AtRQ&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd20121%2f762%2fw1000h562%2f20241102%2f8584-baede10b510bf642f978d08cb29834b5.jpg&ehk=3eryNKgttcEdutMkpmFUrAQZWm5EPokdlJBRoRSJvfU%3d&risl=&pid=ImgRaw&r=0)  
 第二种方式: ![][变量]  
 ![图片][d]
 
 [d]:https://ts1.tc.mm.bing.net/th/id/R-C.46bca01b5ef850d6ba573e7ca56e3bb7?rik=AnfTyID1E0AtRQ&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd20121%2f762%2fw1000h562%2f20241102%2f8584-baede10b510bf642f978d08cb29834b5.jpg&ehk=3eryNKgttcEdutMkpmFUrAQZWm5EPokdlJBRoRSJvfU%3d&risl=&pid=ImgRaw&r=0  
+=======
+![图片](https://ts1.tc.mm.bing.net/th/id/R-C.46bca01b5ef850d6ba573e7ca56e3bb7?rik=AnfTyID1E0AtRQ&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd20121%2f762%2fw1000h562%2f20241102%2f8584-baede10b510bf642f978d08cb29834b5.jpg&ehk=3eryNKgttcEdutMkpmFUrAQZWm5EPokdlJBRoRSJvfU%3d&risl=&pid=ImgRaw&r=0)   
+>>>>>>> fdc2ac2a8d8e5abbe80df2235169e651b379dea7
 20.表格的插入  
 | 姓名 | 年龄 | 性别 |  
 | --- | --- | --- |  
@@ -81,6 +86,7 @@ int main() {
 | 塞巴斯蒂安·埃利奥特·格雷 | 18 | 男 |  
 | 小红 | 17 | 女 |    
 
+<<<<<<< HEAD
 21.简单数学公式插入与排版   
 分数： 
 $$  
@@ -104,6 +110,8 @@ $$
 
 
 
+=======
+>>>>>>> fdc2ac2a8d8e5abbe80df2235169e651b379dea7
     
 
 
