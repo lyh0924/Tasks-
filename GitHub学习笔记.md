@@ -1,3 +1,13 @@
+- [GitHub学习笔记](#github学习笔记)
+  - [1. 关于 Geek 与 Geek 精神](#1-关于-geek-与-geek-精神)
+    - [什么是 Geek？](#什么是-geek)
+    - [Geek 精神是什么？](#geek-精神是什么)
+  - [2. GitHub 与核心概念理解](#2-github-与核心概念理解)
+    - [GitHub 是干什么的？](#github-是干什么的)
+    - [Pull Request（PR）](#pull-requestpr)
+    - [Fork](#fork)
+  - [3. 关于“打开 GitHub 花了半天”的经历](#3-关于打开-github-花了半天的经历)
+  - [4. 这份文档的整洁规范说明](#4-这份文档的整洁规范说明)
 # GitHub学习笔记
 ## 1. 关于 Geek 与 Geek 精神
  
