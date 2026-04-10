@@ -64,16 +64,14 @@ int main() {
 [a]:https://www.baidu.com    
 [b]:https://itbaima.cn  
 19.图片的插入（只能以链接的方式插入：本地或者网络）  
-<<<<<<< HEAD
+
 第一种方式：![](链接)  
 ![图片](https://ts1.tc.mm.bing.net/th/id/R-C.46bca01b5ef850d6ba573e7ca56e3bb7?rik=AnfTyID1E0AtRQ&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd20121%2f762%2fw1000h562%2f20241102%2f8584-baede10b510bf642f978d08cb29834b5.jpg&ehk=3eryNKgttcEdutMkpmFUrAQZWm5EPokdlJBRoRSJvfU%3d&risl=&pid=ImgRaw&r=0)  
-第二种方式: ![][变量]  
+第二种方式: 
 ![图片][d]
 
 [d]:https://ts1.tc.mm.bing.net/th/id/R-C.46bca01b5ef850d6ba573e7ca56e3bb7?rik=AnfTyID1E0AtRQ&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd20121%2f762%2fw1000h562%2f20241102%2f8584-baede10b510bf642f978d08cb29834b5.jpg&ehk=3eryNKgttcEdutMkpmFUrAQZWm5EPokdlJBRoRSJvfU%3d&risl=&pid=ImgRaw&r=0  
-=======
-![图片](https://ts1.tc.mm.bing.net/th/id/R-C.46bca01b5ef850d6ba573e7ca56e3bb7?rik=AnfTyID1E0AtRQ&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd20121%2f762%2fw1000h562%2f20241102%2f8584-baede10b510bf642f978d08cb29834b5.jpg&ehk=3eryNKgttcEdutMkpmFUrAQZWm5EPokdlJBRoRSJvfU%3d&risl=&pid=ImgRaw&r=0)   
->>>>>>> fdc2ac2a8d8e5abbe80df2235169e651b379dea7
+
 20.表格的插入  
 | 姓名 | 年龄 | 性别 |  
 | --- | --- | --- |  
@@ -85,34 +83,6 @@ int main() {
 | :---: | --- | --- |  
 | 塞巴斯蒂安·埃利奥特·格雷 | 18 | 男 |  
 | 小红 | 17 | 女 |    
-
-<<<<<<< HEAD
-21.简单数学公式插入与排版   
-分数： 
-$$  
-\frac{x+1}{20+x} 
-$$  
-
-$$  
-x^2  
-$$  
-
-如果要加下标的话：  
-$$  
-x_2  
-$$  
-
-开方：  
-$$  
-\sqrt[x]{\{[(4+x)-3]}\}  
-$$  
-
-
-
-
-=======
->>>>>>> fdc2ac2a8d8e5abbe80df2235169e651b379dea7
-    
 
 
 
