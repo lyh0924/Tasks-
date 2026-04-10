@@ -1379,4 +1379,5 @@ html
    2. **语法**：
        1. 值类型：整数（正数，负数，零）或auto。数值越大，层级越高
        2. 默认值：auto（等同于未设置，后出现的元素覆盖前者）
-       3. 生效条件：仅对于定位元素（positon:relative,absolute,fixed,sticy）有效  
+       3. 生效条件：仅对于定位元素（positon:relative,absolute,fixed,sticy）有效
+## 学习来源：[黑马pink讲前端](https://space.bilibili.com/415434293/lists?sid=6252199&spm_id_from=333.788.0.0)
