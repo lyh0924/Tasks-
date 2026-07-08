@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    .w{
+        width:80%;
+        margin:20px auto;
+    } /* 起到了让整个盒子居中对齐的效果 */
+    .flex-container{
+        display:flex;
+        /* width:80%; */
+        /* height:120px;父盒子会被子盒子撑大，故不用写高度 */
+        /* gap:10px; 如果用gap则会占用空间达不到一行放5个盒子的效果*/
+        flex-wrap:wrap;
+        /* margin:20px auto; 因为要加margin-left和margin-right因此无法再让其居中*/
+        margin-left:-8px;
+        margin-right:-8px;
+        border:1px red solid; 
+    }
+    .flex-container .flex-item{
+        /* background-color:pink; */
+        flex:0 0 20%;/* 每个盒子占20% */
+        height:120px;
+        margin-bottom:16px;
+        padding:0 8px;
+    }
+    .flex-item .flex-content{
+        height:100%;
+        width:100%;
+        background-color:pink;
+    }
+    .a{
+        display:grid;
+        grid-template-columns:repeat(6,1fr);
+        grid-template-rows:1fr 1fr;
+        gap:10px;
+        width:80%;
+        justify-content:space-between;
+        border:1px solid red;
+    }
+    .b{
+        background-color:aqua;
+        height:60px;
+        /* width:20px; */
+    }
+    .a .b:first-child{
+        height:130px;
+        background-color:pink;
+        grid-column:1/span 2;
+        grid-row:1/span 3;
+    }
+    @media screen and(max-width:1000px){
+        .flex-container .flex-item{
+            flex:0 0 20%;
+        }
+        .a{
+            grid-template-columns:repeat(4,1fr);
+        }
+    }
+    @media screen and (max-width:850px){
+        .a{
+            grid-template-columns:repeat(2,1fr);
+        }
+        .flex-container .flex-item{
+            flex:0 0 33.33333%;
+        }
+    }
+    @media screen and (max-width:550px){
+        .flex-container .flex-item{
+            flex:0 0 50%;
+        }
+    }
+</style>
+<body>
+    <div class="w">
+        <div class="flex-container">
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+        <div class="flex-item">
+            <div class="flex-content">1</div>
+        </div>
+    </div>
+    </div>
+    <div class="a">
+        <div class="b">item</div>
+        <div class="b">item</div>
+        <div class="b">item</div>
+        <div class="b">item</div>
+        <div class="b">item</div>
+        <div class="b">item</div>
+        <div class="b">item</div>
+    </div>
+</body>
+</html>
