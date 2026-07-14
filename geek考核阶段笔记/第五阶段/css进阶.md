@@ -39,7 +39,7 @@
         3. center:项目在交叉轴居中对齐
         4. stretch:项目拉伸填充整个容器高度（需**子项目无固定高度**）
         5. baseline:以项目的第一行文字对齐
-    4. **flex-between**:定义主轴方向（改变主轴方向）
+    4. **flex-direction**:定义主轴方向（改变主轴方向）
        1. row:默认值，子元素沿水平主轴（从左到右）排列
        2. row-reverse:子元素沿水平轴主轴反向排列（从右到左）
        3. column:子元素沿垂直主轴（从上到下）排列
@@ -414,7 +414,7 @@ html
 ```
 **Device Width**:在智能设备上，例如iPhone，iPad等，还可以根据屏幕设备的尺寸来设置相应的样式（或者调用相应的样式文件）。同样的，对于屏幕设备同样可以使用min/max对应参数，如min-device-width或者max-device-width
 ```
-<link rel="stylesheet" media="screen and (max-devixe-width:480px)" href="iphone.css"/>
+<link rel="stylesheet" media="screen and (max-device-width:480px)" href="iphone.css"/>
 这个的意思是iPhone.css样式适用的最大设备宽度是480px比如说iPhone上的显示，这里的“max-device-width”所指的是设备的实际分辨率，也就是可视面积分辨率
 ```
 **not**:使用关键字not是用来排除符号表达式的设备，换句话说not关键词对后面的表达式执行取反操作
