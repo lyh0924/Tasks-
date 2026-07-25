@@ -35,3 +35,4 @@
 ## 第五阶段
 - [css进阶](./geek考核阶段笔记/第五阶段/css进阶.md)
 - [css练习](./geek考核阶段笔记/第五阶段/index.html)
+- [javascript](./geek考核阶段笔记/第五阶段/javascript.md)
