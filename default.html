@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>校园服务导航</title>
+</head>
+<body>
+<script>
+'use strict';
+const tools=[{
+        name:'成绩查询',
+        color:'pink',
+        text:'查看成绩/排名/绩点'
+    },
+    {
+        name:'课程表',
+        color:'maroon',
+        text:'查看课程安排'
+    },
+    {
+        name:'自习室',
+        color:'orange',
+        text:'空位查询'
+    },
+    {
+        name:'校园卡',
+        color:'purple',
+        text:'查看余额与消费记录'
+    },
+    {
+        name:'图书馆',
+        color:'skyblue',
+        text:'查找图书与借阅'
+    },
+    {
+        name:'维修中心',
+        color:'green',
+        text:'宿舍故障上报'
+    },
+    {
+        name:'校车搭乘',
+        color:'teal',
+        text:'呼叫校车与查看校车路线'
+    },
+    {
+        name:'失物招领',
+        color:'brown',
+        text:'丢失物品登记与寻回'
+    }]
+const style = document.createElement('style');//创建一个<style></style>标签
+style.textContent = `  //只拿文字，不包含 HTML 标签 , 会把子元素里的文字也一起拿出来
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  background:#f5f7fa;
+  padding-bottom:100px
+}
+.search{
+  max-width:500px;
+  margin:30px auto;
+  padding:0 20px;
+}
+input{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  outline:none;  //input 输入框、按钮被点击时，浏览器会自动加一圈高亮框(outline：在元素外面，不占布局空间)
+}
+.cards{
+  max-width:500px;
+  margin:0 auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.card{
+  background:white;
+  border-radius:16px;
+  aspect-ratio:1/1; //强制元素变成正方形，宽高比例为 1:1
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;         
+  text-align:center;
+}
+.cardname{
+  font-size:18px;
+  font-weight:bold;
+  margin-bottom:8px;
+  width:100%;
+  text-align:center;
+}
+.cardtext{
+  font-size:14px;
+  color:#666;
+  width:100%;
+  text-align:center;
+}
+
+.top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:#4285F4;
+  color:white;
+  border:none;
+  font-size:20px;
+  display:none;//在页面刚刷新时隐藏，滚动到一定距离时，再出现
+  cursor:pointer
+}
+@media(max-width:480px) {/*手机*/
+  .cards{
+    grid-template-columns:1fr;
+    gap:12px;
+    padding:0 16px;
+  }
+  .card{
+    padding:16px;
+  }
+  .cardname{
+    font-size:16px;
+  }
+  .cardtext{
+    font-size:13px;
+  }
+}
+@media(min-width:481px) and (max-width:767px){/*平板*/
+  .cards{
+    max-width:90%;
+    gap:14px;
+  }
+}
+@media(min-width:768px){/*大屏*/
+  .cards{
+    max-width:700px;
+    grid-template-columns:repeat(3, 1fr); 
+    gap:20px;
+  }
+  .search{
+    max-width:700px;
+  }
+}  
+`;
+document.head.appendChild(style);//把创建的style标签放到head标签里面
+const cardbox=document.createElement('div');//创建一个div标签
+cardbox.className='cards';//.cards->.carBox
+document.body.appendChild(cardbox);//把.carbox放到<body></body>中
+function render(list){
+  cardbox.innerHTML='';//先清空旧卡片内容
+  list.forEach(item=>{
+    const card=document.createElement('div');
+    card.className='card';
+    card.innerHTML=`
+      <div class="cardname" style="color:${item.color}">${item.name}</div>
+      <div class="cardtext">${item.text}</div>`;
+    cardbox.appendChild(card);
+  });
+}
+function debounce(fn,delay) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer=setTimeout(()=>fn.apply(this,args),delay);
+  };
+}
+function throttle(fn,interval){
+  let last=0;
+  return (...args)=>{
+    const now=Date.now();
+    if(now-last>=interval){
+      fn.call(this, ...args);
+      last=now;
+    }
+  };
+}
+const search=document.createElement('div');
+search.className='search';
+const input=document.createElement('input');
+input.placeholder='搜索服务';
+search.appendChild(input);
+document.body.prepend(search);//把 search这个搜索框，添加到页面 body 的最前面
+const searchs=debounce(word=>{
+  if(!word)
+  return render(tools);
+  const res=tools.filter(t=>t.name.includes(word) || t.text.includes(word));//从tools数组里筛选满足下面任一条件就留下名字name包含输入的关键词描述text包含输入的关键词结果存到res里
+  render(res);
+},500);
+input.addEventListener('input',e=>searchs(e.target.value.trim()));//是输入框里,的文字,去掉前后空格(监听输入框内容变化)
+const tops=document.createElement('button');
+tops.className='top';
+tops.innerText='↑';
+document.body.appendChild(tops);
+window.addEventListener('scroll',throttle(()=>{
+  tops.style.display=window.scrollY>0?'block':'none';
+},200));
+tops.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+render(tools);
+</script>
+</body>
+</html>
