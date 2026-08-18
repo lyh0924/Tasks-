@@ -37,7 +37,6 @@
 - [css练习](./geek考核阶段笔记/第五阶段/index.html)
 - [javascript](./geek考核阶段笔记/第五阶段/javascript.md)
 - [JS+节流+防抖小网页](./geek考核阶段笔记/第五阶段/default.html)
-- [document.write( )学习笔记](./geek考核阶段笔记/第五阶段/document()学习笔记.md)
 
 ---
 
