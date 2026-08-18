@@ -202,5 +202,3 @@ box.textContent = "文本内容";
 box.innerHTML = "<span>内容</span>";
 
 ```
-
-> （注：部分内容可能由 AI 生成）
